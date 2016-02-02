@@ -26,9 +26,19 @@
 
         <div class="left row">
             <h1>
-                <i class="fa fa-train"></i>
-                5, 10, 15 m
+                <i class="fa fa-train fa-fw red"></i>
+                5, 10, 15
+                <span class="light">m</span>
             </h1>
+            <h2>
+                <i class="fa fa-music fa-fw"></i>
+                Hello <span class="light">- Adele</span>
+
+                <span class="light">|</span>
+
+                <i class="fa fa-circle green"></i>
+                Connected
+            </h2>
         </div>
 
         <style>
@@ -44,23 +54,26 @@
          .row {
              position: absolute;
              bottom: 10px;
-             width: 50%;
+             /* width: 50%; */
          }
          .right { right: 30px; text-align: right; }
          .left { left: 30px; }
 
          .light { font-weight: 200; }
-         .huge { font-size: 56px; }
+         .huge { font-size: 100px; }
          h1 {
              font-size: 48px;
              margin: 5px;
          }
          h2{ margin: 5px; }
+
+         .green { color: #63db65; }
+         .red { color: #c92e2e; }
         </style>
 
         <style>
          body {
-             background-image: url("https://unsplash.com/photos/6-jTZysYY_U/download");
+             background-image: url("bg.jpg");
              background-size: cover;
              background-repeat: no-repeat;
              height: 100%;
@@ -71,11 +84,17 @@
              bottom: 0;
              left: 0;
              right: 0;
-             height: 200px;
+             height: 300px;
              /* background-color: gray; */
-             background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+             background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%);
              /* Chrome10-25,Safari5.1-6 */
          }
         </style>
+
+        <script>
+         window.setTimeout(function() {
+             window.location.reload();
+         }, 300 * 100);
+        </script>
     </body>
 </html>
