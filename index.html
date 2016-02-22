@@ -14,7 +14,7 @@
         <div class="right row">
             <h1 class="huge">
                 <span id="time">8:34</span>
-                <span class="light">PM</span>
+                <span id="ampm" class="light">PM</span>
             </h1>
             <h2>
                 <span class="light">Weather</span>
@@ -105,6 +105,12 @@
              var timeElm = document.getElementById("time");
              var today = new Date();
              timeElm.innerHTML = (today.getHours() % 12) + ":" + (today.getMinutes());
+
+             if (today.getHours() >= 12) {
+                 document.getElementById("ampm").innerHTML="PM";
+             } else {
+                 document.getElementById("ampm").innerHTML="AM";
+             }
          }, 1000);
         </script>
     </body>
