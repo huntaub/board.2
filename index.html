@@ -101,7 +101,7 @@
              }
          }, 300 * 100);
 
-         window.setInterval(function() {
+         function updateTime() {
              var timeElm = document.getElementById("time");
              var today = new Date();
              timeElm.innerHTML = (today.getHours() % 12) + ":" + (today.getMinutes());
@@ -111,7 +111,10 @@
              } else {
                  document.getElementById("ampm").innerHTML="AM";
              }
-         }, 1000);
+         }
+
+         window.setInterval(updateTime, 1000);
+         window.onload = updateTime;
         </script>
     </body>
 </html>
