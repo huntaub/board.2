@@ -104,7 +104,13 @@
          function updateTime() {
              var timeElm = document.getElementById("time");
              var today = new Date();
-             timeElm.innerHTML = (today.getHours() % 12) + ":" + (today.getMinutes());
+
+             var minutes = today.getMinutes();
+             if (minutes < 10) {
+                 minutes = "0" + minutes;
+             }
+
+             timeElm.innerHTML = (today.getHours() % 12) + ":" + minutes;
 
              if (today.getHours() >= 12) {
                  document.getElementById("ampm").innerHTML="PM";
