@@ -10,10 +10,10 @@
 
     <body>
         <div class="shadow"></div>
-        
+
         <div class="right row">
             <h1 class="huge">
-                8:34
+                <span id="time">8:34</span>
                 <span class="light">PM</span>
             </h1>
             <h2>
@@ -100,6 +100,12 @@
                  window.location.reload();
              }
          }, 300 * 100);
+
+         window.setInterval(function() {
+             var timeElm = document.getElementById("time");
+             var today = new Date();
+             timeElm.innerHTML = (today.getHours() % 12) + ":" + (today.getMinutes());
+         }, 1000);
         </script>
     </body>
 </html>
